@@ -39,3 +39,16 @@ fn gives_ownership() -> String { // will move its return value into the calling 
 fn takes_and_gives_back(a_string: String) -> String { // a_string comes into scope
     a_string // a_string is returned and moves out to the calling function
 }
+
+pub fn multiple_returns() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len();
+
+    (s, length)
+}

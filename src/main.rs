@@ -1,4 +1,5 @@
 mod ownership_string;
+mod ownership_functions;
 
 use crate::ownership_string::ownership_string;
 

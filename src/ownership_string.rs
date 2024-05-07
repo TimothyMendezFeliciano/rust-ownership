@@ -15,4 +15,10 @@ pub fn ownership_string() {
     let _ = x2.replace("1", "2");
 
     println!("Was x1 affected? {}", x1);
+
+    let x = 5;
+    let mut  y = x;
+
+    y = 3;
+    println!("x = {}, y = {}",x,y);
 }

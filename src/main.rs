@@ -1,5 +1,7 @@
 mod ownership_string;
 
+use crate::ownership_string::ownership_string;
+
 fn main() {
     println!("Hello, world!");
 //     Ownership:
@@ -8,7 +10,8 @@ fn main() {
 //     3. When the owner goes out of scope, the value will be dropped.
 
     // s is not valid here, it’s not yet declared
-    let s = "hello";   // s is valid from this point forward
+    let _s = "hello";   // s is valid from this point forward
 
     // do stuff with s
+    ownership_string();
 }                      // this scope is now over, and s is no longer valid

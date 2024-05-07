@@ -1,3 +1,5 @@
+mod ownership_string;
+
 fn main() {
     println!("Hello, world!");
 //     Ownership:

@@ -1,13 +1,16 @@
 pub fn dangling() {
 
-    let reference_to_nothing = dangle();
+    // let reference_to_nothing = dangle();
+
+    let actual_value_of_something = no_dangle();
 }
 
-fn dangle() -> &String {
-    let s = String::from("hello");
+// This is an error.
+// fn dangle() -> &String {
+//     let s = String::from("hello");
 
-    &s // We return a reference to the String, s.
-} // Here, s goes out of scope, and is dropped. Its memory goes away.
+    // &s // We return a reference to the String, s.
+// } // Here, s goes out of scope, and is dropped. Its memory goes away.
 
 // solution
 fn no_dangle() -> String {

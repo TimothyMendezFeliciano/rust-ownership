@@ -22,9 +22,9 @@ fn only_one_borrower() {
     let mut s = String::from("hello");
 
     let r1 = &mut s;
-    let r2 = &mut s;
+    // let r2 = &mut s;
 
-    println!("{}, {}", r1, r2);
+    // println!("{}, {}", r1, r2);
 //     The above will throw an error.
 //     This is meant for examples only.
 
@@ -47,9 +47,9 @@ fn only_one_borrower() {
 
     let t1 = &t; // no problem
     let t2 = &t; // no problem
-    let t3 = &mut t; // BIG PROBLEM
+    // let t3 = &mut t; // BIG PROBLEM
 
-    println!("{}, {}, and {}", t1, t2, t3);
+    // println!("{}, {}, and {}", t1, t2, t3);
 //     We cannot have mutable references to immutable values before their usage.
 
     let mut f = String::from("Formula");
